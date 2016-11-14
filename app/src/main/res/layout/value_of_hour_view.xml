@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:gravity="center_horizontal"
+              android:layout_marginRight="16dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+    <com.devspark.robototextview.widget.RobotoTextView android:id="@+id/day_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/colorSecondaryText" android:textSize="12sp" app:typeface="roboto_light" android:text=""/>
+    <ImageView
+        android:id="@+id/temp_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/weather_none_available"/>
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_marginTop="4dp"
+        android:id="@+id/temp"
+        app:typeface="roboto_regular"
+        android:textColor="@color/colorPrimaryText"/>
+</LinearLayout>

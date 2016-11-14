@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Material Weather</string>
+    <string name="emoji_no_recent">No recent</string>
+</resources>

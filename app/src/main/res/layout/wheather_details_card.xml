@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <android.support.v7.widget.CardView android:layout_below="@+id/card_main" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:id="@+id/card_title"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/colorPrimaryText"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:id="@+id/temp_icon"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/temperature_celsius"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/temp_title"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_toRightOf="@+id/temp_icon"
+                    android:text="Temperature"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@+id/temp_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/temp_title"
+                    android:layout_marginTop="8dp"
+                    android:textSize="22sp"
+                    android:text="-11° / -23°"
+                    android:textColor="@color/colorPrimaryText"
+                    android:layout_toRightOf="@+id/temp_icon"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:id="@+id/wind_icon"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/weather_windy"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wind_title"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_toRightOf="@+id/wind_icon"
+                    android:text="Wind speed"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@+id/wind_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/wind_title"
+                    android:layout_marginTop="8dp"
+                    android:textSize="22sp"
+                    android:text="21 kph 275°"
+                    android:textColor="@color/colorPrimaryText"
+                    android:layout_toRightOf="@+id/wind_icon"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:id="@+id/cloud_icon"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/cloud"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cloud_title"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_toRightOf="@+id/cloud_icon"
+                    android:text="Cloudiness"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@+id/clouds_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cloud_title"
+                    android:layout_marginTop="8dp"
+                    android:textSize="22sp"
+                    android:text="22°"
+                    android:textColor="@color/colorPrimaryText"
+                    android:layout_toRightOf="@+id/cloud_icon"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:id="@+id/humidity_icon"
+                    android:layout_marginRight="8dp"
+                    app:srcCompat="@drawable/water"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/humidity_title"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_toRightOf="@+id/humidity_icon"
+                    android:text="Humidity"/>
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@+id/humidity_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/humidity_title"
+                    android:layout_marginTop="8dp"
+                    android:textSize="22sp"
+                    android:text="2°"
+                    android:textColor="@color/colorPrimaryText"
+                    android:layout_toRightOf="@+id/humidity_icon"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</merge>

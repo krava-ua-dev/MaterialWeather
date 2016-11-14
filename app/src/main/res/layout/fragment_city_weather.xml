@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="RtlHardcoded">
+        <android.support.design.widget.AppBarLayout android:id="@+id/app_bar" android:layout_width="match_parent" app:elevation="0dp" android:layout_height="200dp">
+            <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/colapsing_toolbar" app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <android.support.v4.widget.Space android:id="@+id/main_city2" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_centerHorizontal="true" android:layout_marginTop="16dp"/>
+                    <android.support.v4.widget.Space android:id="@+id/main_state2" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_centerHorizontal="true" android:layout_below="@+id/main_city2"/>
+                    <android.support.v4.widget.Space android:id="@+id/layout_for_anchor" android:layout_width="@dimen/image_width" android:layout_height="0dp" android:layout_centerHorizontal="true" android:layout_marginTop="70dp" android:layout_below="@+id/main_state2"/>
+                </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"  app:layout_anchor="@+id/layout_for_anchor" app:title=""/>
+        <android.support.v4.widget.NestedScrollView android:id="@+id/scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="true" android:paddingTop="?attr/actionBarSize" app:behavior_overlapTop="84dp" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <include layout="@layout/weather_five_vules_by_hours"/>
+
+                <include layout="@layout/daily_widget"/>
+
+                <include layout="@layout/wheather_details_card"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <com.devspark.robototextview.widget.RobotoTextView android:id="@+id/main_city" android:layout_width="wrap_content" android:layout_height="60dp" android:layout_gravity="center_horizontal" android:textColor="#fff" android:gravity="right" android:textSize="24sp" android:lines="1" app:finalHeight="24dp" app:typeface="roboto_medium"/>
+        <com.devspark.robototextview.widget.RobotoTextView android:id="@+id/main_state" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_gravity="center_horizontal" android:textSize="18sp" android:textColor="@color/colorPrimaryLight" android:gravity="right" android:lines="1" app:typeface="roboto_light" app:finalHeight="24dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/main_weather_icon" android:layout_width="@dimen/image_width" android:layout_height="@dimen/image_width" android:layout_gravity="center_horizontal" android:layout_marginLeft="-180dp" android:src="@drawable/weather_none_available" app:layout_behavior="com.krava.dagger2test.presentation.view.behavoir.WeatherMainIconBehavior" app:finalHeight="@dimen/main_icon_size" app:finalYPosition="2dp" app:startHeight="2dp" app:startToolbarPosition="2dp" app:startXPosition="2dp"/>
+        <com.devspark.robototextview.widget.RobotoTextView android:id="@+id/main_value" android:layout_width="wrap_content" android:layout_height="124dp" android:layout_gravity="center_horizontal" android:textColor="#fff" android:text="31°" android:gravity="center" app:layout_behavior="com.krava.dagger2test.presentation.view.behavoir.MainWeatherTempBehavior" app:typeface="roboto_regular" android:textSize="80sp" app:finalHeight="48dp" app:finalYPosition="2dp" app:startHeight="2dp" app:startToolbarPosition="22dp" app:startXPosition="2dp"/>
+
+        <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout
+            xmlns:rfal="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_main_rfal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            rfal:rfal_frame_color="#ffffff"
+            rfal:rfal_frame_alpha="0.7"
+            >
+            <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionButton
+                xmlns:rfab="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/activity_main_rfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                rfab:rfab_size="normal"
+                rfab:rfab_drawable="@drawable/ic_menu_white_24dp"
+                rfab:rfab_color_normal="#FF9800"
+                rfab:rfab_color_pressed="#263238"
+                rfab:rfab_shadow_radius="4dp"
+                rfab:rfab_shadow_color="#999999"
+                rfab:rfab_shadow_dx="0dp"
+                rfab:rfab_shadow_dy="5dp"
+                />
+        </com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
